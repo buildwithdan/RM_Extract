@@ -37,6 +37,6 @@ engine = create_engine('postgresql://dnellpersonal:v2_3v2ej_AZxVQBp87rqyu86nFyUw
 
 #df.to_csv('z.allcolumns4.csv',index=False)
 
-df.to_sql('data', engine)
+df.to_sql('data', engine, if_exists="append", index=True)
 
-Print('Inserted in DB')
+print('Inserted in DB')
