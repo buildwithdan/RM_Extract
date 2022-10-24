@@ -33,10 +33,13 @@ df = pd.json_normalize(output)
 
 print('Completed')
 
+print(df.columns)
+
+
 engine = create_engine('postgresql://dnellpersonal:v2_3v2ej_AZxVQBp87rqyu86nFyUwqiX@db.bit.io/dnellpersonal/rightmove_large')
 
 #df.to_csv('z.allcolumns4.csv',index=False)
 
-df.to_sql('data', engine, if_exists="append", index=True)
+df.to_sql('data5', engine, if_exists="append", index=True)
 
 print('Inserted in DB')
